@@ -1,5 +1,7 @@
 class Hero:
-    pass
+    def hero1(self, attack, health):
+        self.attack = attack
+        self.health = health
 
 #Object/Instance
 hero1 = Hero()
