@@ -1,19 +1,18 @@
-class Hero:
-    def hero1(self, attack, health):
-        self.attack = attack
-        self.health = health
-
-#Object/Instance
-hero1 = Hero()
-hero2 = Hero()
-
-hero1.name = "Kardel"
-hero1.health = 100
+class Employee:
+    ''' Dasar kelas untuk semua karyawan '''
+    jumlah_karyawan = 0
 
 
-hero2.name = "venomancer"
-hero2.health = 100
+    def __init__(self, nama, gaji):
+        self.nama = nama
+        self.gaji = gaji
+        Employee.jumlah_karyawan += 1
 
-print(hero1)
-print(hero1.__dict__)
-print(hero1.name)
+    def tampilkan_jumlah(self):
+        print("Total karyawan : ", Employee.jumlah_karyawan)
+
+
+    def tampilkan_profile(self):
+        print("Nama :", self.nama)
+        print("Gaji :", self.gaji)
+        print()
